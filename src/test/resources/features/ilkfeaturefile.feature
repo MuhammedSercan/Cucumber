@@ -10,7 +10,7 @@ Feature: ilk feature file
     Then sonuclarda iphone oldugunu dogrular
     And close the application
 
-    @tesla
+  @tesla
   Scenario: TC02_google_tesla_arama
   When kullanıcı tesla için arama yapar
   Then sonuçlarda tesla olduğunu doğrular
@@ -29,5 +29,8 @@ Feature: ilk feature file
 #  10.Bakground: Her bir Scenario kelimesinden ONCE tek bir sefer çalışır
 #  NOTE: Teknik olarak istenilen kelime isteniler step de kullanilabilir,
 #        ama anlam karmasasi olmamasi icin bu adimlar takip edilir
+#  11. dryRun = false --> dryRun yokmuş gibi çalışır. Tek tek tüm stepleri browserde açar.
+#  12. dryRun = true --> Yeni bir step eklendiğinde; sadece step definitions ları konsolda kontrol eder. Eksik olan var mı diye bakar.
+
 
   
