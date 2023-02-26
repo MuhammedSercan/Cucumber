@@ -6,8 +6,15 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "./src/test/resources/features",//features folder path
         glue = "stepdefinitions",//stepdefinitions path
-        tags = "@scenario_outline_1",
-        dryRun = false //test case çalıştırılmadan false yapılmalı; java kodu yazılmamış step var mı diye hızlıca tarar.
+        tags = "@personel_olusturma",
+        dryRun = false,//test case çalıştırılmadan false yapılmalı; java kodu yazılmamış step var mı diye hızlıca tarar.
+        plugin = {
+                "pretty",
+                "html:target/default-cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml"
+        },
+        monochrome=true
 )
 
 public class Runner {

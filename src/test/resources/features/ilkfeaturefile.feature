@@ -17,7 +17,7 @@ Feature: ilk feature file
   Then close the application
 
 #  1. Her feature file, Feature: kelimesi ile baslamak zorundadir
-#  2. Her bir file da, yanliz bit Feature: kullanilabilir
+#  2. Her bir file da, yanliz bir Feature: kullanilabilir
 #  3. Senaryo(TEST CASE) olusturmak icin Scenario kelimesi kullanilir
 #  4. Birden fazla Scenario: kullanilabilir
 #  5. Her bir adim Given,When,And,Then,But,* kelimelerinden biriyle baslamalidir.
