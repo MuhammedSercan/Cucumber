@@ -16,9 +16,10 @@ Feature: personel_olusturma
     Then close the application
 
     Examples: personel_bilgileri
-    |firstname|lastname|positions|office  |extension  |start_date|salary|
-    |John     |Walker  |SDET     |ISTANBUL| 345       |2023-02-25|120000|
-    |Zeynep   |Black   |Developer|ANKARA  | 123       |2023-02-25|150000|
-    |Ali      |Bak     |BA       |IZMIR   | 128       |2023-02-25|180000|
-    |Feyza    |Sar     |QA       |ERZURUM | 121       |2023-02-25|280000|
+      | firstname | lastname | positions    | office     | extension | start_date | salary |
+      | john      | walker   | SDET         | ISTANBUL   | 345       | 2023-03-01 | 100000 |
+      | zeynep    | black    | developer    | ankara     | 3412      | 2023-03-04 | 800000 |
+      | ali       | tez      | BA           | Tokat      | 678       | 2023-03-08 | 870000 |
+      | feyza     | sar      | PO           | Izmir      | 7456      | 2023-03-03 | 860000 |
+      | Mukesh    | Srivasan | Scrum Master | Haydarabat | 980       | 2023-03-09 | 50000  |
 

@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "./src/test/resources/features",//features folder path
         glue = "stepdefinitions",//stepdefinitions path
-        tags = "@personel_olusturma",
+        tags = "@rental_odev",
         dryRun = false,//test case çalıştırılmadan false yapılmalı; java kodu yazılmamış step var mı diye hızlıca tarar.
         plugin = {
                 "pretty",
