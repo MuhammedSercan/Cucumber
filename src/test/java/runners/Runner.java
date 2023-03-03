@@ -5,9 +5,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "./src/test/resources/features",//features folder path
-        glue = "stepdefinitions",//stepdefinitions path
-        tags = "@data_tables",
-        dryRun = false,//test case çalıştırılmadan false yapılmalı; java kodu yazılmamış step var mı diye hızlıca tarar.
+        glue = {"stepdefinitions","hooks"},//stepdefinitions path
+        tags = "@excel_automation",
+        dryRun = true,//test case çalıştırılmadan false yapılmalı; java kodu yazılmamış step var mı diye hızlıca tarar.
         plugin = {
                 "pretty",
                 "html:target/default-cucumber-reports.html",
