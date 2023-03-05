@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="10.72" tests="2" skipped="0" failures="1" errors="0">
-<testcase classname="hooks_test" name="TC01_google_iphone_arama" time="5.024">
+<testsuite name="Cucumber" time="9.109" tests="2" skipped="0" failures="1" errors="0">
+<testcase classname="hooks_test" name="TC01_google_iphone_arama" time="4.972">
 <system-out><![CDATA[
 Given kullanici google gider................................................passed
 When kullanici "iphone" için arama yapar....................................passed
@@ -8,7 +8,7 @@ Then sonuclarda "apple" içerdiğini dogrular.................................pa
 Then close the application..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="hooks_test" name="TC02_google_tesla_arama" time="5.52">
+<testcase classname="hooks_test" name="TC02_google_tesla_arama" time="3.964">
 <failure type="java.lang.AssertionError">
 <![CDATA[java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:87)
@@ -20,8 +20,9 @@ Then close the application..................................................pass
 </failure>
 <system-out><![CDATA[
 Given kullanici google gider................................................passed
-When kullanici "tesla" için arama yapar.....................................passed
+When kullanici "lenovo" için arama yapar....................................passed
 Then sonuclarda "toros" içerdiğini dogrular.................................failed
+Then ekran goruntusu al.....................................................skipped
 Then close the application..................................................skipped
 ]]></system-out>
 </testcase>

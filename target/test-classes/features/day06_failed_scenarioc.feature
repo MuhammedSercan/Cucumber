@@ -10,6 +10,7 @@ Feature: hooks_test
     Then close the application
 
   Scenario: TC02_google_tesla_arama
-    When kullanici "tesla" için arama yapar
+    When kullanici "lenovo" için arama yapar
     Then sonuclarda "toros" içerdiğini dogrular
+    Then ekran goruntusu al
     Then close the application
