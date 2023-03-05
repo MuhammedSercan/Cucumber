@@ -7,6 +7,7 @@
 -Cucumber feature klasoru
     Tum feature file lar bu klasore gider
     Tum test caseler gherken dilinde bu klasorde yazilir
+
 -----------19 Subat 2023---------------------------
 1. Feature file olustur: ilkfeaturefile.feature
 Feature: ilk feature file
@@ -41,6 +42,7 @@ Feature: ilk feature file
     public WebElement popUpAccept;
     @FindBy(name = "q")
     public WebElement searchBox;
+
 ---------Scenario Outline-----------------
 #Scenario -> Scenario Outline
 #"" -> "<sutun_ismi>"
@@ -78,7 +80,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ExcelStepDefinitions {
-//Page Objelerini Olustur
+    //Page Objelerini Olustur
     HomePage homePage;
     LoginPage loginPage;
     ExcelUtils excelUtils;
@@ -90,29 +92,29 @@ public class ExcelStepDefinitions {
         String sayfa = "customer_info";
         excelUtils= new ExcelUtils(path,sayfa);
         excelData=excelUtils.getDataList();
-//        NOTE Loop kodunu tamamla
+    // NOTE Loop kodunu tamamla
         for(Map<String,String> data : excelData){
-//            Ana sayfaya git
+    // Ana sayfaya git
             Driver.getDriver().get(ConfigReader.getProperty("app_url"));
             homePage = new HomePage();
             loginPage = new LoginPage();
-//            ana sayfa login butonuna tikla
+    // ana sayfa login butonuna tikla
             homePage.firstLogin.click();
             ReusableMethods.waitFor(1);
-//            emaili gonder
+    // emaili gonder
             loginPage.email.sendKeys(data.get("username"));
             ReusableMethods.waitFor(1);
-//            sifre gonder
+    // sifre gonder
             loginPage.password.sendKeys(data.get("password"));
             ReusableMethods.waitFor(1);
-//            login butonuna tikla
+    // login butonuna tikla
             loginPage.login.click();
             ReusableMethods.waitFor(1);
-//            GIRIS YAPILDI.GIRIS YAPILDIGINI VERIFY EDELIM.
-//            ID gorunur ise giris basarilidir
+    // GIRIS YAPILDI.GIRIS YAPILDIGINI VERIFY EDELIM.
+    // ID gorunur ise giris basarilidir
             Assert.assertTrue(homePage.userID.isDisplayed());
             ReusableMethods.getScreenshot("Login_Goruntusu");
-//            LOG OUT YAPALIM
+    // LOG OUT YAPALIM
             homePage.userID.click();
             ReusableMethods.waitFor(1);
             homePage.logOutLink.click();
@@ -203,3 +205,21 @@ public class Runner {
 
 **********************PARALLEL TEST******************
 1. Plugins leri pom.xml e ekle
+    *surefire -> parallel test icin
+    *failsafe -> parallel testlerde bir testin fail olmasi durumunda diger testler calismaya devam etmesini kolaylastirir
+    *cucumber-report -> extra renkli gelismis raporlar verir
+2. Coklu runner class olustur. Bu runnerlar farkli scenarilari calistirsin
+    *SmokeTestRunner
+    *RegressionTestRunner
+    *TestRunner
+NOTE: Burda kullanilan taglerden en az bir tanesi feature fileda olmali. Aksi takdirde test bulunamaz
+3. Terminal/Power Shell/CMD kullanarak, maven kodu ile testleri calistir:
+mvn clean verify
+mvn clean install
+NOTE: Cucumber Reporting Linki :
+https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting
+https://github.com/damianszczepanik/maven-cucumber-reporting
+NOTE: Bilgisayardaki terminal CMD ile tester ayni sekilde calistirilabilir
+Bu durumda projenin icine girmemiz gerekir:
+cd ABSOLUTE PATH
+cd /Users/techproed/IdeaProjects/batch103Cucumber
