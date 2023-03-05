@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="0.198" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="excel_login_feature" name="TC01_musteri_giris_testi" time="0.017">
-<failure/>
+<testsuite name="Cucumber" time="5.216" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="hooks_test" name="TC02_google_tesla_arama" time="5.054">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.GoogleStepDefinitions.sonuclarda_içerdiğini_dogrular(GoogleStepDefinitions.java:52)
+	at ✽.sonuclarda "toros" içerdiğini dogrular(file:///C:/Users/mserc/IdeaProjects/batch103Cucumber/src/test/resources/features/day06_failed_scenarioc.feature:14)
+]]>
+</failure>
 <system-out><![CDATA[
-Given kullanıcı "customer_info" bilgileri ile giriş yapar...................undefined
+Given kullanici google gider................................................passed
+When kullanici "tesla" için arama yapar.....................................passed
+Then sonuclarda "toros" içerdiğini dogrular.................................failed
+Then close the application..................................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>
