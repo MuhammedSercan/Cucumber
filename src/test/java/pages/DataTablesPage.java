@@ -24,6 +24,9 @@ public class DataTablesPage {
     @FindBy(xpath = "//*[@id='DTE_Field_office']")
     public WebElement office;
 
+    @FindBy(xpath = "//*[@id='DTE_Field_office']")
+    public WebElement office2;
+
     @FindBy(xpath = "//*[@id='DTE_Field_extn']")
     public WebElement extension;
 
